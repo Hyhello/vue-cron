@@ -6,7 +6,7 @@ The @hyhello/vue-cron component for vue2, supports single page applications.
 
 ## Examples
 
-[codepen.io](https://codepen.io/vue-book/pen/VwMZJJE)
+[codepen.io](https://codepen.io/vue-book/pen/RwLbXeN)
 
 ## Use Setup
 

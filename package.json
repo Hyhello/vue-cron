@@ -1,6 +1,6 @@
 {
   "name": "@hyhello/vue-cron",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A cron expression component based on Vue2.0.",
   "keywords": [
     "cron",
