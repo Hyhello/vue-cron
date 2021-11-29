@@ -1,0 +1,85 @@
+@include B(input) {
+    width: 80px;
+    line-height: 1;
+    font-size: 12px;
+    position: relative;
+    display: inline-block;
+    @include when(disabled) {
+        @include E(decrease increase) {
+            & {
+                cursor: not-allowed;
+                color: #e4e7ed;
+            }
+        }
+        @include E(inner) {
+            opacity: 0.8;
+        }
+    }
+    @include E(inner) {
+        -webkit-appearance: none;
+        background-color: #fff;
+        background-image: none;
+        border-radius: 4px;
+        border: 1px solid #dcdfe6;
+        box-sizing: border-box;
+        color: #606266;
+        display: inline-block;
+        font-size: inherit;
+        height: 26px;
+        line-height: 26px;
+        outline: none;
+        padding: 0 8px;
+        transition: border-color .2s cubic-bezier(.645,.045,.355,1);
+        width: 100%;
+    }
+    @include E(extra) {
+        position: absolute;
+        right: 1px;
+        top: 1px;
+        @include flex(center, column nowrap);
+        @include E(decrease increase) {
+            display: inline-block;
+            width: 20px;
+            height: 12px;
+            line-height: 12px;
+            cursor: pointer;
+            user-select: none;
+            text-align: center;
+            color: #777777;
+            border-left: 1px solid #dcdfe6;
+            background-color: #f5f7fa;
+            line-height: 1;
+            font-size: 10px;
+            &:hover {
+                cursor: pointer;
+                color: $theme-color;
+            }
+            svg {
+                width: 1em;
+                height: 1em;
+                overflow: hidden;
+                fill: currentColor;
+            }
+        }
+        @include E(increase) {
+            border-radius: 0 4px 0  0;
+            border-bottom: 1px solid #dcdfe6;
+            @include when(disabled) {
+                &, &:hover{
+                    cursor: not-allowed;
+                    color: #e4e7ed;
+                }
+            }
+        }
+        @include E(decrease) {
+            border-radius: 0 0 4px 0;
+            @include when(disabled) {
+                &, &:hover{
+                    cursor: not-allowed;
+                    color: #e4e7ed;
+                }
+            }
+        }
+    }
+
+}

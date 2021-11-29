@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<!-- import CSS -->
+		<style>
+			html, body, #app {
+				width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 15px;
+                text-align: center;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div id="app">
+            <div>{{ value }}</div>
+            <c-cron :value="value" @change="change"></c-cron>
+        </div>
+	</body>
+	<!-- import Vue before Element -->
+	<script src="./node_modules/vue/dist/vue.js"></script>
+
+	<!-- import JavaScript -->
+	<script src="./lib/index.js"></script>
+
+	<script>
+		new Vue({
+			el: '#app',
+			data: function() {
+				return {
+                    value: '* * * * * ? *'
+				};
+			},
+            methods: {
+                change (val) {
+                    this.value = val;
+                }
+            }
+		});
+	</script>
+</html>
