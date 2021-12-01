@@ -145,7 +145,7 @@ export default {
 						<input-number
 							value={noop.min}
 							min={0}
-							max={noop.max - 1}
+							max={59}
 							disabled={disabled}
 							onChange={handleChange}
 							onInput={($event) => (this.noop.min = $event)}
@@ -153,7 +153,7 @@ export default {
 						分钟开始，每{' '}
 						<input-number
 							value={noop.max}
-							min={noop.min + 1}
+							min={1}
 							max={59}
 							disabled={disabled}
 							onChange={handleChange}

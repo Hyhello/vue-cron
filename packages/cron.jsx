@@ -58,7 +58,6 @@ export default {
 				this.mapData.week = '?';
 			}
 			const output = apiFormat(RESULT_TPL, this.mapData).trim();
-			console.log(this.mapData);
 			this.$emit('input', output);
 			this.$emit('change', output);
 		}
